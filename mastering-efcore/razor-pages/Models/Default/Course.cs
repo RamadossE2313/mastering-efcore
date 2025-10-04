@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace razor_pages.Models
+﻿namespace razor_pages.Models.Default
 {
     public class Course
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CourseID { get; set; }
         public string Title { get; set; }
         public int Credits { get; set; }

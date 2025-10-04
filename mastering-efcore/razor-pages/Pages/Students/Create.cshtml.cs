@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using razor_pages.Data;
-using razor_pages.Models;
+using razor_pages.Models.DataAnnodations;
 
 namespace razor_pages.Pages.Students
 {
     public class CreateModel : PageModel
     {
-        private readonly razor_pages.Data.StudentContext _context;
+        private readonly Data.DataAnnotations.StudentContext _context;
 
-        public CreateModel(razor_pages.Data.StudentContext context)
+        public CreateModel(Data.DataAnnotations.StudentContext context)
         {
             _context = context;
         }

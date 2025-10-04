@@ -7,15 +7,15 @@ namespace razor_pages.Pages.Students
 {
     public class EditModel : PageModel
     {
-        private readonly razor_pages.Data.StudentContext _context;
+        private readonly Data.DataAnnotations.StudentContext _context;
 
-        public EditModel(razor_pages.Data.StudentContext context)
+        public EditModel(Data.DataAnnotations.StudentContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-        public Student Student { get; set; } = default!;
+        public Models.DataAnnodations.Student Student { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -24,7 +24,7 @@ namespace razor_pages.Pages.Students
                 return NotFound();
             }
 
-            var student =  await _context.Students.FirstOrDefaultAsync(m => m.ID == id);
+            var student =  await _context.Students.FirstOrDefaultAsync(m => m.Id == id);
             if (student == null)
             {
                 return NotFound();
@@ -50,7 +50,7 @@ namespace razor_pages.Pages.Students
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StudentExists(Student.ID))
+                if (!StudentExists(Student.Id))
                 {
                     return NotFound();
                 }
@@ -65,7 +65,7 @@ namespace razor_pages.Pages.Students
 
         private bool StudentExists(int id)
         {
-            return _context.Students.Any(e => e.ID == id);
+            return _context.Students.Any(e => e.Id == id);
         }
     }
 }

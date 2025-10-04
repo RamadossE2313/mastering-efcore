@@ -7,14 +7,14 @@ namespace razor_pages.Pages.Students
 {
     public class IndexModel : PageModel
     {
-        private readonly StudentContext _context;
+        private readonly razor_pages.Data.DataAnnotations.StudentContext _context;
 
-        public IndexModel(StudentContext context)
+        public IndexModel(razor_pages.Data.DataAnnotations.StudentContext context)
         {
             _context = context;
         }
 
-        public IList<Student> Student { get;set; } = default!;
+        public IList<razor_pages.Models.DataAnnodations.Student> Student { get;set; } = default!;
 
         public async Task OnGetAsync()
         {

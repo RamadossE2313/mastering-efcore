@@ -1,6 +1,6 @@
-﻿using razor_pages.Models;
+﻿using razor_pages.Models.Default;
 
-namespace razor_pages.Data
+namespace razor_pages.Data.Default
 {
     public static class DbInitializer
     {
@@ -29,13 +29,13 @@ namespace razor_pages.Data
 
             var courses = new Course[]
             {
-                new Course{CourseID=1050,Title="Chemistry",Credits=3},
-                new Course{CourseID=4022,Title="Microeconomics",Credits=3},
-                new Course{CourseID=4041,Title="Macroeconomics",Credits=3},
-                new Course{CourseID=1045,Title="Calculus",Credits=4},
-                new Course{CourseID=3141,Title="Trigonometry",Credits=4},
-                new Course{CourseID=2021,Title="Composition",Credits=3},
-                new Course{CourseID=2042,Title="Literature",Credits=4}
+                new Course{Title="Chemistry",Credits=3},
+                new Course{Title="Microeconomics",Credits=3},
+                new Course{Title="Macroeconomics",Credits=3},
+                new Course{Title="Calculus",Credits=4},
+                new Course{Title="Trigonometry",Credits=4},
+                new Course{Title="Composition",Credits=3},
+                new Course{Title="Literature",Credits=4}
             };
 
             context.Courses.AddRange(courses);

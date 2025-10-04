@@ -1,11 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using razor_pages.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<StudentContext>(options =>
+
+//builder.Services.AddDbContext<razor_pages.Data.Default.StudentContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("StudentContext") ?? throw new InvalidOperationException("Connection string 'StudentContext' not found.")));
+
+builder.Services.AddDbContext<razor_pages.Data.DataAnnotations.StudentContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("StudentContext") ?? throw new InvalidOperationException("Connection string 'StudentContext' not found.")));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
@@ -28,11 +31,11 @@ else
 // ensuring database created. if no database found then it will create it otherwise no action.
 using(var scope = app.Services.CreateScope())
 {
-    var context = scope.ServiceProvider.GetRequiredService<StudentContext>();
+    var context = scope.ServiceProvider.GetRequiredService<razor_pages.Data.DataAnnotations.StudentContext>();
     // it will create just empty database, nothing else
     context.Database.EnsureCreated();
     // it's creating basic data
-    DbInitializer.Initialize(context);
+    razor_pages.Data.DataAnnotations.DbInitializer.Initialize(context);
 }
 
 app.UseHttpsRedirection();
