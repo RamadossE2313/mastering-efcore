@@ -1,10 +1,10 @@
-﻿using razor_pages.Models.DataAnnodations;
+﻿using razor_pages.Models.FluentValidation;
 
-namespace razor_pages.Data.DataAnnotations
+namespace razor_pages.Data.FluentValidation
 {
     public static class DbInitializer
     {
-        public static void Initialize(razor_pages.Data.DataAnnotations.StudentContext context)
+        public static void Initialize(StudentContext context)
         {
             // Look for any students.
             if (context.Students.Any())
@@ -42,12 +42,13 @@ namespace razor_pages.Data.DataAnnotations
             context.SaveChanges();
 
             var enrollments = new Enrollment[]
-              {
+            {
                 new Enrollment{Student = students[0], Course = courses[0], Grade = Grade.A},
                 new Enrollment{Student = students[0], Course = courses[1], Grade = Grade.C},
                 new Enrollment{Student = students[1], Course = courses[3], Grade = Grade.B},
-              };
-            
+            };
+
+
             context.Enrollments.AddRange(enrollments);
             context.SaveChanges();
         }
