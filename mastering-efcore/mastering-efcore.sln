@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "razor-pages", "razor-pages\razor-pages.csproj", "{481D49D0-DBE4-4164-A5C7-0D33A369C0B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "razor-pages", "Practice\razor-pages\razor-pages.csproj", "{481D49D0-DBE4-4164-A5C7-0D33A369C0B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-efcore", "webapi-efcore\webapi-efcore.csproj", "{2007D8F9-1F88-41A6-9648-4EFA8B38044A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-efcore", "Final\webapi-efcore\webapi-efcore.csproj", "{2007D8F9-1F88-41A6-9648-4EFA8B38044A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Final", "Final", "{C8AD540D-CF5E-41E1-9B47-8524882F38FD}"
 EndProject
