@@ -21,10 +21,21 @@ builder.Services.AddRazorPages();
 
 // Change life time scope for the AddDbContext (scoped --> Transient)
 // always keeping as scoped is recommented
-//builder.Services.AddDbContext<razor_pages.Data.DataAnnotations.StudentContext>(options =>
-//{
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("StudentContext") ?? throw new InvalidOperationException("Connection string 'StudentContext' not found."));
-//}, ServiceLifetime.Transient);
+
+// studentcontext
+// dbcontext options
+builder.Services.AddDbContext<razor_pages.Data.DataAnnotations.StudentContext>(
+    options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("StudentContext") ?? throw new InvalidOperationException("Connection string 'StudentContext' not found."));
+});
+
+// context factory singltonclass
+// StudentContext is used as scoped here.
+builder.Services.AddDbContext<razor_pages.Data.DataAnnotations.StudentContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("StudentContext") ?? throw new InvalidOperationException("Connection string 'StudentContext' not found."));
+});
 
 // we can't change the dbcontext scope with pool
 // it's always scoped
@@ -32,10 +43,10 @@ builder.Services.AddRazorPages();
 // it will create instance and reuse the instances, 
 // it can hold upto 1024 bydefault, but you can change the value also.
 
-builder.Services.AddDbContextPool<razor_pages.Data.DataAnnotations.StudentContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("StudentContext") ?? throw new InvalidOperationException("Connection string 'StudentContext' not found."));
-}, 1024);
+//builder.Services.AddDbContextPool<razor_pages.Data.DataAnnotations.StudentContext>(options =>
+//{
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("StudentContext") ?? throw new InvalidOperationException("Connection string 'StudentContext' not found."));
+//}, 1024);
 
 // registering by own without using db context extension method
 //builder.Services.AddScoped<StudentContext>(options =>

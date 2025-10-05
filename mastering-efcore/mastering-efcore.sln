@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35728.132 d17.12
+VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "razor-pages", "razor-pages\razor-pages.csproj", "{481D49D0-DBE4-4164-A5C7-0D33A369C0B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-efcore", "webapi-efcore\webapi-efcore.csproj", "{2007D8F9-1F88-41A6-9648-4EFA8B38044A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Final", "Final", "{C8AD540D-CF5E-41E1-9B47-8524882F38FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Practice", "Practice", "{083AB43A-B8C6-4455-81A3-8108D81BF5E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +21,16 @@ Global
 		{481D49D0-DBE4-4164-A5C7-0D33A369C0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{481D49D0-DBE4-4164-A5C7-0D33A369C0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{481D49D0-DBE4-4164-A5C7-0D33A369C0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2007D8F9-1F88-41A6-9648-4EFA8B38044A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2007D8F9-1F88-41A6-9648-4EFA8B38044A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2007D8F9-1F88-41A6-9648-4EFA8B38044A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2007D8F9-1F88-41A6-9648-4EFA8B38044A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{481D49D0-DBE4-4164-A5C7-0D33A369C0B9} = {083AB43A-B8C6-4455-81A3-8108D81BF5E9}
+		{2007D8F9-1F88-41A6-9648-4EFA8B38044A} = {C8AD540D-CF5E-41E1-9B47-8524882F38FD}
 	EndGlobalSection
 EndGlobal
