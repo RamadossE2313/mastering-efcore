@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Final", "Final", "{C8AD540D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Practice", "Practice", "{083AB43A-B8C6-4455-81A3-8108D81BF5E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelDotnet.Learn", "ParallelDotnet.Learn\ParallelDotnet.Learn.csproj", "{D18A95A9-425F-4EA5-A65A-EB72E319F8FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithoutTopLevelStatement", "WithoutTopLevelStatement\WithoutTopLevelStatement.csproj", "{535D5DF9-99FE-4FC5-BCD1-9D2CBF3300E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{2007D8F9-1F88-41A6-9648-4EFA8B38044A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2007D8F9-1F88-41A6-9648-4EFA8B38044A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2007D8F9-1F88-41A6-9648-4EFA8B38044A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D18A95A9-425F-4EA5-A65A-EB72E319F8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18A95A9-425F-4EA5-A65A-EB72E319F8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18A95A9-425F-4EA5-A65A-EB72E319F8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18A95A9-425F-4EA5-A65A-EB72E319F8FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535D5DF9-99FE-4FC5-BCD1-9D2CBF3300E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535D5DF9-99FE-4FC5-BCD1-9D2CBF3300E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535D5DF9-99FE-4FC5-BCD1-9D2CBF3300E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535D5DF9-99FE-4FC5-BCD1-9D2CBF3300E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{481D49D0-DBE4-4164-A5C7-0D33A369C0B9} = {083AB43A-B8C6-4455-81A3-8108D81BF5E9}
 		{2007D8F9-1F88-41A6-9648-4EFA8B38044A} = {C8AD540D-CF5E-41E1-9B47-8524882F38FD}
+		{D18A95A9-425F-4EA5-A65A-EB72E319F8FF} = {083AB43A-B8C6-4455-81A3-8108D81BF5E9}
+		{535D5DF9-99FE-4FC5-BCD1-9D2CBF3300E9} = {083AB43A-B8C6-4455-81A3-8108D81BF5E9}
 	EndGlobalSection
 EndGlobal

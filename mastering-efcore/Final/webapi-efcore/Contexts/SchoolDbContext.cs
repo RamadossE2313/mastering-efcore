@@ -8,11 +8,11 @@ namespace webapi_efcore.Contexts
     {
         public void Configure(EntityTypeBuilder<Student> builder)
         {
-            builder.ToTable("student");
+            builder.ToTable("Student");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.FirstMidName).HasColumnName("first_name").IsRequired().HasMaxLength(100);
-            builder.Property(x => x.LastName).HasColumnName("last_name").IsRequired().HasMaxLength(100);
-            builder.Property(x => x.EnrollmentDate).HasColumnName("enrollment_date").IsRequired();
+            builder.Property(x => x.FirstMidName).IsRequired().HasMaxLength(100);
+            builder.Property(x => x.LastName).IsRequired().HasMaxLength(100);
+            builder.Property(x => x.EnrollmentDate).IsRequired();
 
             //  One Student → Many Enrollments
             builder.HasMany(x => x.Enrollments)
@@ -25,10 +25,10 @@ namespace webapi_efcore.Contexts
     {
         public void Configure(EntityTypeBuilder<Course> builder)
         {
-            builder.ToTable("course");
+            builder.ToTable("Course");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Title).HasColumnName("title").IsRequired().HasMaxLength(100);
-            builder.Property(x => x.Credits).HasColumnName("credits");
+            builder.Property(x => x.Title).IsRequired().HasMaxLength(100);
+            builder.Property(x => x.Credits);
 
             // One Course → Many Enrollments
             builder.HasMany(x => x.Enrollments)
@@ -41,16 +41,15 @@ namespace webapi_efcore.Contexts
     {
         public void Configure(EntityTypeBuilder<Enrollment> builder)
         {
-            builder.ToTable("enrollment");
+            builder.ToTable("Enrollment");
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Grade)
-                   .HasColumnName("grade")
                    .HasConversion<string>()
                    .IsRequired(false);
 
-            builder.Property(x => x.CourseID).HasColumnName("course_id");
-            builder.Property(x => x.StudentID).HasColumnName("student_id");
+            builder.Property(x => x.CourseID);
+            builder.Property(x => x.StudentID);
 
 
             builder.HasOne(x => x.Student)
